@@ -1,0 +1,4 @@
+{{ $file := .Get 0 }}
+{{ $link := relref .Page (.Get 0) }}
+
+<a href="{{ $link }}">{{ with .Site.GetPage "page" $file }}{{ .Title }}{{ end }}</a>
